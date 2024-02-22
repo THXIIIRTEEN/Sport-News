@@ -1,0 +1,1398 @@
+@font-face {
+    font-family: 'Darkline';
+    src: url(../fonts/Darkline/Darkline.ttf) format('truetype');
+}
+
+body { 
+    margin: 0; 
+    transition: 0.2s;
+}
+
+/*ANIMATIONS*/ 
+
+.continue-reading button:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.12), 1px 2px 2px 0px rgba(0, 0, 0, 0.10), 2px 4px 3px 0px rgba(0, 0, 0, 0.06), 4px 8px 4px 0px rgba(0, 0, 0, 0.02), 6px 12px 4px 0px rgba(0, 0, 0, 0.00);
+}
+
+.nav-buttons a:hover {
+    font-weight: 700;
+    color: #262626;
+    transition: 0.2s;
+}
+
+.arrow-button:hover {
+    background-color: #262626;
+    transition: 0.2s;
+}
+
+.left-buttons button:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.12), 1px 2px 2px 0px rgba(0, 0, 0, 0.10), 2px 4px 3px 0px rgba(0, 0, 0, 0.06), 4px 8px 4px 0px rgba(0, 0, 0, 0.02), 6px 12px 4px 0px rgba(0, 0, 0, 0.00);
+    
+}
+
+.burger:hover {
+    background-color: #262626;
+    color: #EBEEF3;
+    transition: 0.2s;
+}
+
+
+/*CONTENT*/
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.category-column img {
+    pointer-events: none;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+button {
+    cursor: pointer;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+h1 {
+    font-family: 'Darkline';
+    font-weight: 400;
+    font-size: 42px;
+    color: black;
+    margin: 0%;
+    display: block;
+    white-space: nowrap;
+    z-index: 999;
+}
+
+#white {
+    color: #EBEEF3;
+}
+
+.burger-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    top: 0%;
+    z-index: 910;
+    padding: 16% 0%;
+    gap: 10px 0px;
+    font-weight: 500;
+    display: none;
+    right: 0%;
+    transition: 0.4s;
+}
+
+.burger-nav a {
+    width: 100%;
+    padding: 2%;
+    text-align: center;
+    border-bottom: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #262626;
+}
+
+#last-a {
+    border-bottom: none;
+}
+
+.close-button {
+    width: 40px;
+    height: 40px;
+    background-color: #EBEEF3;
+    color: #262626;
+    border: none;
+    border-radius: 6px;
+    padding: 5px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+    margin-right: 6%;
+}
+
+.c-button-position {
+    width: 100%;
+    display: flex;
+    padding: 2% 6% !important;
+    justify-content: right;
+}
+
+.burger {
+    width: 40px;
+    height: 40px;
+    background-color: #EBEEF3;
+    color: #262626;
+    border: none;
+    border-radius: 6px;
+    padding: 5px;
+    font-size: 15px;
+    display: none;
+    z-index: 999;
+}
+
+h2 {
+    font-style: normal;
+    font-weight: 900;
+    font-family: 'Montserrat';
+    background: linear-gradient(180deg, #262626 0%, #B8C2CE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 100%;
+    margin: 0%;
+    z-index: 10;
+    position: relative;
+    color: #F1F3F7;
+    display: flex;
+}
+
+body {
+    background: #F9FAFC;
+    font-family: 'DM Sans';
+}
+
+main {
+    padding: 0% 8%;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: white;
+    z-index: 900;
+    padding: 1% 6%;
+    height: 80px;
+    position: fixed;
+    top: 0%;
+}
+
+.nav-buttons {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+a {
+    text-decoration: none;
+    color: #7D7D7D;
+    margin: 0% 2%;
+    transition: 0.2s;
+}
+
+#search-bar {
+    background-color: #B8C2CE;
+    border: none;
+    height: 35px;
+    padding: 0% 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 110px;
+    border-radius: 6px;
+}
+
+#search-bar input {
+    background-color: #B8C2CE;
+    border: none;
+    height: 35px;
+    border: none;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    padding: 0% 12%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Montserrat';
+}
+
+#search-bar svg {
+    width: 16px;
+    height: 16px;
+    margin: 1%;
+}
+
+input::placeholder {
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'DM Sans';
+}
+
+.first-frame {
+    margin-top: 12%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background: url(../img/basketball-player.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ball {
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    mix-blend-mode: luminosity;
+    pointer-events: none;
+    top: 10%;
+    left: 1%;
+    z-index: 0;
+}
+
+.basketball-player {
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+    display: none;
+}
+
+.main-news {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    align-items: flex-end;
+    z-index: 10;
+}
+
+.main-news-block {
+    width: 270px;
+    height: 233px;
+    border-radius: 6px;
+    background: url(../img/running-girl.jpg), lightgray -13.293px -2px / 130.587% 100.858% no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 5% 0%;
+}
+
+#second-block {
+    background: url(../img/race-car.jpg), lightgray -13.293px -2px / 130.587% 100.858% no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.news-block-text {
+    border-radius: 6px;
+    background: linear-gradient(0deg, #F2F2F2 35.23%, rgba(242, 242, 242, 0.00) 100%);
+    height: 50%;
+    padding: 6% 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+h5 {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    color: #262626;
+    font-weight: 600;
+    line-height: 123.9%;
+    margin: 0%;
+}
+
+h6 {
+    margin: 0%;
+    font-size: 10px;
+    font-weight: 600;
+    margin: 2% 0%;
+}
+
+#grey {
+    color: rgba(38, 38, 38, 0.60);
+}
+
+.first-frame h2{
+    width: 33%;
+    height: min-content;
+    font-size: 80px;
+}
+
+
+.continue-reading {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    align-self: flex-end;
+    z-index: 10;
+    transition: 0.4s ease;
+}
+
+.continue-reading p {
+    color: #262626;
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.continue-reading button {
+    width: 70%;
+    color: #E1E8F0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    background-color: #262626;
+    border: none;
+    box-sizing: border-box;
+    padding: 3% 2%;
+    transition: 0.2s;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+    width: 100%;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.category-column {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    align-items: center;
+    height: 500px;
+}
+
+.category-sign  {
+    border-radius: 6px;
+    background-color: #EBEEF3;
+    padding: 12% 6%;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    display: flex;
+    height: auto;
+}
+
+.category-column h2 {
+    text-align: center;
+    font-size: 2.5vw;
+    width: 100%;
+    line-height: 105%;
+    justify-content: center;
+}
+
+.category-column img {
+    border-radius: 6px;
+    margin-top: 8%;
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    flex-grow: 1;
+}
+
+h3 {
+    font-size: 28px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+#even-numbered {
+    flex-direction: column-reverse;
+}
+
+#even-numbered img {
+    margin-top: 0%;
+    margin-bottom: 8%;
+}
+
+.trending-news {
+    border-radius: 6px;
+    background: #EBEEF3;
+    display: flex;
+    flex-direction: row;
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.trending-news-left {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 3% 2%;
+}
+
+.trending-news-right {
+    width: 50%;
+}
+
+.trending-news-left h3 {
+    margin: 0%;
+
+}
+
+.sport-news-block {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+}
+
+.sport-news-block img {
+    width: 39%;
+    border-radius: 6px;
+    margin-right: 4%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sport-text {
+    width: 46%;
+    border-bottom: solid;
+    border-bottom-color: #B8C2CE;
+    border-bottom-width: 2px;
+    padding: 1% 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sport-text p {
+    font-size: 12px;
+    color: #696868;
+    font-weight: 400;
+    line-height: 125%;
+}
+
+.trending-news-right {
+    background: url(../img/bicycles.png);
+    border-radius: 6px;
+    padding: 3%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.category-button {
+    background: none;
+    border: solid;
+    border-color: #EBEEF3;
+    border-width: 3px;
+    color: #EBEEF3;
+    border-radius: 6px;
+    width: max-content;
+    cursor: default;
+}
+
+#large-button {
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.trending-text p {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin: 1% 0%;
+}
+
+h4 {
+    font-size: 36px;
+    font-weight: 900;
+    color: white;
+    font-family: 'Montserrat';
+    margin: 0%;
+}
+
+#right-arrow {
+    transform: rotate(180deg);
+}
+
+.carousel-banner-1 {
+    background: url(../img/handshake.png);
+    border-radius: 6px 6px 0px 0px;
+    padding: 3%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.carousel-banner-2 {
+    background: url(../img/second.png);
+    border-radius: 6px 6px 0px 0px;
+    padding: 3%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-banner-3 {
+    background: url(../img/arsenalwoman.png);
+    border-radius: 6px 6px 0px 0px;
+    padding: 3%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.carousel-banner-4 {
+    background: url(../img/maradonna.png);
+    border-radius: 6px 6px 0px 0px;
+    padding: 3%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#banner {
+    display: none;
+}
+
+#yeee {
+    color: white;
+    font-weight: 300;
+    font-size: 18px;
+    margin: 1% 0%;
+    line-height: 140%;
+}
+
+#carousel-text {
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    margin: 1% 0%;
+    line-height: 140%;
+}
+
+.carousel-banner-content {
+    width: 80%;
+}
+
+.content-text {
+    margin-top: 150px;
+}
+
+.carousel {
+    margin-top: 8%;
+}
+
+
+.carousel-buttons {
+    background-color: #F1F3F7;
+    display: flex;
+    justify-content: right;
+    padding: 2%;
+    border-radius: 0px 0px 6px 6px;
+}
+
+.carousel-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 450px;
+    align-items: center;
+}
+
+.arrow-button {
+    width: 70px;
+    height: 50px;
+    background-color: #BAB8B8;
+    border: none;
+    padding: 0px 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.carousel-panel p {
+    font-family: Montserrat;
+    color: #757577;
+    font-weight: 600;
+    margin: 0%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#first-page {
+    background-color: #262626;
+    border-radius: 100%;
+    color: white;
+    pointer-events: none;
+}
+
+
+#page {
+    background: none;
+    border-radius: 100%;
+    color: #757577;
+    pointer-events: none;
+}
+
+.block-group {
+    margin-top: 6%;
+}
+
+.block-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.karate-block {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+
+.block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.highlights {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 48%;
+    height: 300px;
+    background: url(../img/karate.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.highlights .text {
+    background: url(../img/Card.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px 0px 6px 6px;
+    box-sizing: border-box;
+    padding: 4%;
+}
+
+.highlights .text p {
+    font-size: 10px;
+    font-weight: 500;
+    margin: 2% 0%;
+}
+
+.news-list {
+    width: 48%;
+    height: 300px;
+    border-radius: 6px;
+    background-color: #EBEEF3;
+    padding: 2%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-instance {
+    display: flex;
+    flex-direction: row;
+    margin: 0% 0% 4% 0%;
+}
+
+.news-instance img {
+    width: 70px;
+    border-radius: 3px;
+    height: 70px;
+    background: url(../img/boxer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.news-instance .text {
+    margin: 0% 2%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.block button {
+    border: none;
+    background-color: #B8C2CE;
+    padding: 2% 4%;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 14px;
+    align-self: center;
+}
+
+.block button p {
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.block button p::after {
+    content: url(../img/arrow.svg);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    margin-left: 8%;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #EBEEF3;
+    box-sizing: border-box;
+    padding: 2%;
+    border-collapse: collapse;
+    font-family: 'Montserrat';
+}
+
+.left {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+tr {
+    border-bottom: 1px solid #B8C2CE;
+
+}
+
+#second-karate {
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 2%;
+    background-color: #EBEEF3;
+    border-radius: 6px;
+}
+
+thead {
+    height: 40px;
+}
+
+thead tr {
+    border-bottom: none !important;
+}
+
+td {
+    color: #262626;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#last {
+    border-bottom: none;
+}
+
+td img {
+    width: 24px;
+    height: 24px;
+    margin-right: 2%;
+}
+
+.team-name {
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    text-align: right;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.center {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.sports-article {
+    margin-top: 8%;
+}
+
+.sport-bottom h4 {
+    color: #262626;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.sport-block {
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sport-top {
+    background: url(../img/darkbasketball.jpg);
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 6px;
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.sport-profile img {
+    width: 44px;
+    height: 44px;
+    border-radius: 100%;
+}
+
+.sport-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 6%;
+}
+
+.sport-profile h5 {
+    margin-left: 4%;
+    color: black !important;
+}
+
+.sport-bottom p {
+    color: rgba(38, 38, 38, 0.60);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0%;
+    margin-top: 4%;
+}
+
+.sport-bottom h4 {
+    margin: 4% 0%;
+}
+
+.sport-bottom h5 {
+    color: #696868;
+}
+
+#small-button {
+    padding: 2% 4%;
+    border-width: 1px;
+}
+
+.sport-groups {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.sport-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+    width: 180px;
+    justify-content: space-between;
+}
+
+.subscription {
+    padding: 6% 6%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    background: url(../img/football-player.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #EBEEF3;
+    background-position: 90% 0%;
+    margin-top: 8%;
+}
+
+.subscription-left {
+    width: 50%;
+}
+
+.subscription h2 {
+    font-size: 60px;
+    line-height: 100%;
+}
+
+.sub-input {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    align-items: center;
+    justify-content: space-between;
+    border: solid;
+    border-color: #262626;
+    border-width: 1px;
+    padding-left: 2%;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-top: 8%;
+}
+
+.sub-input input {
+    background: none;
+    border: none;
+    color: rgba(38, 38, 38, 0.37);
+    padding: 0% 4%;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sub-input input::placeholder {
+    color: rgba(38, 38, 38, 0.37);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sub-input button {
+    background-color: #262626;
+    border: none;
+    border-radius: 0px 1px 1px 0px;
+    width: 20%;
+    box-sizing: border-box;
+    padding: 4%;
+    height: 40px;
+}
+
+.sub-input button svg {
+    width: 100%;
+    height: 100%;
+}
+
+.left-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    justify-content: space-between;
+}
+
+.left-buttons button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #262626;
+    border-radius: 4px;
+    padding: 6%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.left-buttons button a {
+    width: 100%;
+    height: 100%;
+}
+
+.left-buttons button a svg {
+    width: 100%;
+    height: 100%;
+}
+
+.sub-buttons {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0px 0px 6px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 4% 0% 6% 0%;
+}
+
+#sport2 {
+    background: url(../img/hockey.jpg);
+    background-size: cover;
+}
+
+#sport3 {
+    background: url(../img/badminton.jpg);
+    background-size: cover;
+}
+
+
+@media (max-width: 1300px) and (min-width: 320px) {
+    .burger {
+        display: block;
+    }
+
+    .nav-buttons {
+        display: none;
+    }
+
+    #search-bar {
+        display: none;
+    }
+}
+
+@media (max-width: 960px) and (min-width: 320px) {
+    .first-frame {
+        flex-direction: column;
+        background: none;
+    }
+
+    .first-frame h2 {
+        width: 100%;
+        margin-top: 0%;
+        text-align: center;
+    }
+
+    .continue-reading {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-news {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 8%;
+    }
+
+    .basketball-player {
+        display: flex;
+        margin-top: 16%;
+    }
+
+    .category {
+        margin-top: 2%;
+    }
+
+    .category-sign h2 {
+        justify-content: center;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    #large-button {
+        align-self: flex-end;
+    }
+
+    .carousel-banner-content {
+        width: 100%;
+    }
+
+    .block-group {
+        flex-direction: column;
+    }
+
+    .karate-block {
+        width: 100%;
+    }
+
+    .sport-groups {
+        flex-direction: column;
+    }
+
+    .sport-block {
+        width: 100%;
+        margin: 4% 0%;
+    }
+
+    #small-button {
+        border-width: 2px;
+    }
+
+    .subscription-left {
+        width: 60%;
+    }
+
+    .subscription h2 {
+        font-size: 40px;
+    }
+
+    .trending-news-left {
+        width: 100%;
+    }
+
+    .trending-news-right {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    .ball {
+        width: 80%;
+        height: auto;
+    }
+
+    .trending-news {
+        padding: 4%;
+    }
+
+    header {
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .first-frame h2 {
+        font-size: 32px;
+    }
+
+    .continue-reading p {
+        font-size: 12px;
+    }
+
+    .continue-reading button {
+        font-size: 12px;
+    }
+
+    .main-news {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .main-news-block {
+        width: 100%;
+    }
+
+    .news-block-text {
+        padding: 8% 16%;
+        box-sizing: border-box;
+    }
+
+    .carousel-banner {
+        padding: 8%;
+    }
+
+    .categories {
+        flex-direction: column;
+    }
+
+    .category-column {
+        width: 100%;
+        flex-direction: column !important;
+    }
+
+    .category-column img {
+        margin: 0%;
+        margin-bottom: 0% !important;
+    }
+
+    .category-sign {
+        margin: 8% 0%;
+    }
+
+    .category-sign h2 {
+        font-size: 24px;
+    }
+
+    h6 {
+        font-size: 8px;
+    }
+
+    h5 {
+        font-size: 11px;
+    }
+
+    .sport-text {
+        border-bottom-width: 1px;
+    }
+
+    .sport-text p {
+        font-size: 9px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    #large-button {
+        font-size: 10px;
+        padding: 8px 16px;
+        border-width: 2px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    .content-text p {
+        font-size: 12px;
+    }
+
+    #carousel-text {
+        font-size: 12px;
+    }
+
+    .arrow-button {
+        width: 50px;
+        height: 30px;
+    }
+
+    .carousel-panel p {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    .block {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .highlights {
+        width: 100%;
+        margin: 4% 0%;
+    }    
+
+    .news-list {
+        width: 100%;
+        padding: 6% 6% 12% 6%;
+        margin: 4% 0%;
+    }
+
+    table td {
+        font-size: 12px !important;
+    }
+
+    table th {
+        font-size: 12px !important;
+    }
+
+    .sport-buttons {
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .sport-bottom h4 {
+        font-size: 16px !important;
+    }
+
+    .sports-article {
+        padding: 0% 6%;
+        box-sizing: border-box;
+    }
+
+    .subscription {
+        height: 160px;
+    }
+
+    .subscription h2 {
+        font-size: 20px;
+    }
+
+    .sub-input input {
+        font-size: 12px;
+        width: 120px;
+    }
+
+    .sub-input input::placeholder {
+        font-size: 12px;
+    }
+
+    .sub-input button {
+        padding: 4%;
+        height: 20px;
+        width: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .sub-input {
+        width: 150px;
+    }
+
+    .sub-buttons {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .sub-buttons .carousel-panel {
+        width: 100%;
+    }
+
+    .sub-buttons .left-buttons {
+        width: 40%;
+        margin-top: 4%;
+    }
+
+    .sub-buttons .left-buttons button {
+        width: 35px;
+        height: 35px;
+        padding: 6%;
+
+    }
+}

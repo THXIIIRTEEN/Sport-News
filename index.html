@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport News</title>
+    <link rel="stylesheet" href="styles/normalisator.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Sport News</h1>
+        <div class="nav-buttons">
+            <a href="">Home</a>
+            <a href="">Category</a>
+            <a href="">Trending News</a>
+            <a href="">Recent News</a>
+            <a href="">Clubs Ranking</a>
+            <a href="">Sports Article</a>
+        </div>
+        <button id="search-bar">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.65667 0.5C7.94477 0.542566 8.23287 0.572034 8.51769 0.624423C9.90254 0.886366 11.0877 1.5314 12.0764 2.53333C12.9734 3.44686 13.5693 4.53065 13.8214 5.78798C14.1422 7.36946 13.9196 8.87564 13.1273 10.2836C12.8719 10.7354 12.5544 11.148 12.2532 11.5933C12.263 11.6031 12.2957 11.6424 12.3317 11.6752C13.6413 12.9652 14.9508 14.2553 16.2604 15.5421C16.5452 15.8204 16.5779 16.1184 16.3488 16.3476C16.1229 16.5735 15.8151 16.5473 15.5369 16.2755C14.2208 14.9789 12.9014 13.6823 11.5853 12.3857C11.5493 12.3497 11.51 12.3169 11.4707 12.2809C11.2579 12.425 11.0582 12.5723 10.8487 12.7066C9.67009 13.4498 8.38019 13.7969 6.99207 13.7445C5.16198 13.6757 3.60362 12.9718 2.33009 11.6555C1.37412 10.6634 0.794648 9.48138 0.578573 8.11927C0.545834 7.93264 0.526191 7.74928 0.5 7.56264C0.5 7.27123 0.5 6.97982 0.5 6.68841C0.509822 6.64257 0.522917 6.6 0.529465 6.55416C0.568751 6.29222 0.591668 6.027 0.647324 5.76833C0.909233 4.53065 1.48871 3.45668 2.37265 2.55298C3.36463 1.53795 4.55632 0.889641 5.95426 0.624423C6.22926 0.572034 6.50754 0.542566 6.78254 0.5C7.07392 0.5 7.36529 0.5 7.65667 0.5ZM1.53454 7.09115C1.54764 7.32362 1.54764 7.51681 1.57055 7.70671C1.7146 8.92148 2.17949 9.99544 3.02415 10.8861C4.49411 12.4282 6.30456 13.0078 8.37692 12.6051C10.2005 12.2514 11.5624 11.2004 12.371 9.51412C13.1862 7.81149 13.1371 6.09249 12.2237 4.44879C11.2907 2.76253 9.81414 1.80317 7.90221 1.56742C6.39295 1.38078 5.00484 1.75078 3.78696 2.67085C2.31699 3.78739 1.58365 5.29029 1.53454 7.09115Z" fill="white"/>
+            </svg>
+            <input type="search" placeholder="Search">
+
+        </button>
+        <button class="burger" id="burger" onclick="burger">☰</button>
+        <div style="display: none;" class="burger-nav" id="burger-nav">
+            <!--<div class="c-button-position">
+                <button class="close-button" id="close-button">×</button>
+            </div>-->
+            <a href="">Home</a>
+            <a href="">Category</a>
+            <a href="">Trending News</a>
+            <a href="">Recent News</a>
+            <a href="">Clubs Ranking</a>
+            <a href="" id="last-a">Sports Article</a>
+        </div>
+    </header>
+    
+    <main>
+        <div class="first-frame">
+            <img src="img/basketball-player.png" class="basketball-player" alt="">
+
+            <h2>
+                TOP <br> SCORER TO THE FINAL MATCH
+            </h2>
+            <img src="img/Ball.jpg" alt="" class="ball">
+
+            <div class="continue-reading">
+                <p>The EuroLeague Finals Top Scorer is the individual award for the player that gained the highest points in the EuroLeague Finals</p>
+                <button>continue reading</button>
+            </div>
+
+            <div class="main-news">
+                <div class="main-news-block">
+                    <div class="news-block-text">
+                        <h6 id="grey">Race98 - 03 June 2023</h6>
+                        <h5>Ethiopian runners took the top four spots.</h5>
+                    </div>
+                </div>
+                
+                <div class="main-news-block" id="second-block">
+                    <div class="news-block-text">
+                        <h6 id="grey">INDYCAR - 03 June 2023</h6>
+                        <h5>IndyCar Detroit: Dixon quickest in second practice</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>Category</h3>
+
+            <div class="categories">
+                <div class="category-column">
+                    <div class="category-sign">
+                        <h2>FOOTBALL</h2>
+                    </div>
+                    <img src="img/soccer.jpg" alt="">
+                </div>
+
+                <div class="category-column" id="even-numbered">
+                    <div class="category-sign">
+                        <h2>BASCKET BALL</h2>
+                    </div>
+                    <img src="img/baball.jpg"  alt="">
+                </div>
+
+                <div class="category-column">
+                    <div class="category-sign">
+                        <h2>CAR SPORT</h2>
+                    </div>
+                    <img src="img/car.jpg" alt="">
+                </div>
+
+                <div class="category-column" id="even-numbered">
+                    <div class="category-sign">
+                        <h2>TABLE TENNIS</h2>
+                    </div>
+                    <img src="img/tennis.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="trending-news">
+            <div class="trending-news-left">
+                <h3>Trending News</h3>
+                <div class="sport-news-block">
+                    <img src="img/horses.jpg" alt="">
+
+                    <div class="sport-text">
+                        <h6 id="grey">Race98 - 03 June 2023</h6>
+                        <h5>6-Year-Old Horse Dies at Belmont Park After Race Injury</h5>
+                        <p>NEW YORK—A 6-year-old horse died after being injured in a race at Belmont Park ahead of next week’s</p>
+                    </div>
+                    
+                </div>
+
+                <div class="sport-news-block">
+                    <img src="img/bicycling.jpg" alt="">
+
+                    <div class="sport-text">
+                        <h6 id="grey">Jony.Ls - 03 June 2023</h6>
+                        <h5>Savilia Blunk Embraces Longer Season with World Cup</h5>
+                        <p>Last year, Savilia Blunk took a more conservative approach to her first season as an Elite Class athlete, skipping some</p>
+                    </div>
+                    
+                </div>
+
+                <div class="sport-news-block">
+                    <img src="img/boxing.jpg" alt="">
+
+                    <div id="last" class="sport-text">
+                        <h6 id="grey">King.F - 03 June 2023</h6>
+                        <h5>Ryan Garcia is fighting again, this time on social media</h5>
+                        <p>Boxing star Ryan Garcia and his promoter, Hall of Fame fighter Oscar De La Hoya, reignited their war of words via Twitter on</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="trending-news-right">
+                <button class="category-button" id="large-button">Cycling</button>
+                <div class="trending-text">
+                    <p>Debits - 03 June 2023</p>
+                    <h4>DISCOVER THE MEMBER BENEFITS OF USA CYCLING!</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel">
+            <div style="display: flex;" class="carousel-banner-1" id="banner">
+                <div class="carousel-banner-content">
+                    <button class="category-button" id="large-button">Football</button>
+                    <div class="content-text">
+                        <p id="yeee">Arsenal England - 05 July 2023</p>
+                        <h4>Jose Mourinho’s perfect response to the Lionel Messi and Cristiano Ronaldo debate</h4>
+                        <p id="carousel-text">Their battle was at its scintillating best when Messi was playing Barcelona and Ronaldo was representing bitter rivals Real Madrid</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-banner-2" id="banner">
+                <div class="carousel-banner-content">
+                    <button class="category-button" id="large-button">Football</button>
+                    <div class="content-text">
+                        <p id="yeee">Russia Spartak - 27 September 2022</p>
+                        <h4>The State Duma proposed to limit the work of foreign sports agents</h4>
+                        <p id="carousel-text">It is necessary to limit the work of foreign sports agents in Russia in children's and youth sports, there should also be a legislative definition of "foreign sports agent" with all subsequent restrictions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-banner-3" id="banner">
+                <div class="carousel-banner-content">
+                    <button class="category-button" id="large-button">Football</button>
+                    <div class="content-text">
+                        <p id="yeee">England Manchester - 13 August 2023</p>
+                        <h4>Braga is an ideal: it got out of the crisis, sold the coach for 10 million, built a football city</h4>
+                        <p id="carousel-text">The new season is already here. The regular season starts soon, and if you haven't decided who to support yet, I'm rushing to your aid with an annual educational program</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-banner-4" id="banner">
+                <div class="carousel-banner-content">
+                    <button class="category-button" id="large-button">Football</button>
+                    <div class="content-text">
+                        <p id="yeee">Germany Berlin - 26 October 2023</p>
+                        <h4>Auchan has been sponsoring Lance for 40 years. The network is owned by Bunderwehr</h4>
+                        <p id="carousel-text">The new season is already here. The regular season starts soon, and if you haven't decided who to support yet, I'm rushing to your aid with an annual educational program</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-buttons">
+                <div class="carousel-panel">
+                    <button class="arrow-button" id="left-arrow-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 50" fill="none">
+                            <g clip-path="url(#clip0_34_4192)">
+                              <path d="M47.0781 26C47.6304 26 48.0781 25.5523 48.0781 25C48.0781 24.4477 47.6304 24 47.0781 24L47.0781 26ZM22.2917 24.2929C21.9012 24.6834 21.9012 25.3166 22.2917 25.7071L28.6557 32.0711C29.0462 32.4616 29.6794 32.4616 30.0699 32.0711C30.4604 31.6805 30.4604 31.0474 30.0699 30.6569L24.4131 25L30.0699 19.3431C30.4604 18.9526 30.4604 18.3195 30.0699 17.9289C29.6794 17.5384 29.0462 17.5384 28.6557 17.9289L22.2917 24.2929ZM47.0781 24L22.9988 24L22.9988 26L47.0781 26L47.0781 24Z" fill="#EBEEF3"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_34_4192">
+                                <rect x="70" width="50" height="70" rx="3" transform="rotate(90 70 0)" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                    <p class="numbering" id="first-page">1</p>
+                    <p class="numbering" id="page">2</p>
+                    <p class="numbering" id="page">3</p>
+                    <p class="numbering" id="page">4</p>
+                    <button class="arrow-button" id="right-arrow-button">
+                        <svg id="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 50" fill="none">
+                            <g clip-path="url(#clip0_34_4192)">
+                              <path d="M47.0781 26C47.6304 26 48.0781 25.5523 48.0781 25C48.0781 24.4477 47.6304 24 47.0781 24L47.0781 26ZM22.2917 24.2929C21.9012 24.6834 21.9012 25.3166 22.2917 25.7071L28.6557 32.0711C29.0462 32.4616 29.6794 32.4616 30.0699 32.0711C30.4604 31.6805 30.4604 31.0474 30.0699 30.6569L24.4131 25L30.0699 19.3431C30.4604 18.9526 30.4604 18.3195 30.0699 17.9289C29.6794 17.5384 29.0462 17.5384 28.6557 17.9289L22.2917 24.2929ZM47.0781 24L22.9988 24L22.9988 26L47.0781 26L47.0781 24Z" fill="#EBEEF3"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_34_4192">
+                                <rect x="70" width="50" height="70" rx="3" transform="rotate(90 70 0)" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="block-group">
+            <div class="karate-block">
+                <div class="sign">
+                    <h3>Recent News</h3>
+                </div>
+
+                <div class="block">
+                    <div class="highlights">
+                        <div class="text">
+                            <p id="white">Day 5 Highlights</p>
+                            <h5 id="white">Baku 2023 World Taekwondo Championships</h5>
+                        </div>
+                    </div>
+                
+            
+                    <div class="news-list">
+                        <div class="news-instance">
+                            <img src="img/boxer.png" alt="">
+                            <div class="text">
+                                <h6 id="grey">#Pollar. 87 - 12 July 2023</h6>
+                                <h5>Baku 2023 Taekwondo Championships</h5>
+                            </div>
+                        </div>
+
+                        <div class="news-instance">
+                            <img src="img/golf.png" alt="">
+                            <div class="text">
+                                <h6 id="grey">#Goft. Toni - 20 July 2023</h6>
+                                <h5>Open Championship Royal Liverpool Golf</h5>
+                            </div>
+                        </div>
+
+                        <div class="news-instance">
+                            <img src="img/cricket.png" alt="">
+                            <div class="text">
+                                <h6 id="grey">#Cricket. Toni - 27 July 2023</h6>
+                                <h5>Ireland Tour of England Test 2023</h5>
+                            </div>
+                        </div>
+
+                        <button><p>More</p></button>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="karate-block">
+                <div class="sign">
+                    <h3>Clubs Ranking</h3>
+                </div>
+
+                <div class="block" id="second-karate">
+                    <table>
+                        <thead><th class="right">Club</th><th class="left"></th><th>GP</th><th>W</th><th>D</th><th>L</th><th>F</th><th>A</th><th>GD</th></thead>
+                        <tbody>
+                            <tr><td class="center">1</td><td class="left"><div class="team-name"><img src="img/mancity.png" alt=""> Manchester City</div></td><td>38</td><td>29</td><td>6</td><td>3</td><td>99</td><td>26</td><td>73</td></tr>
+                            <tr><td class="center">2</td><td class="left"><div class="team-name"><img src="img/liverpool.png" alt=""> Liverpool</div></td><td>38</td><td>28</td><td>8</td><td>2</td><td>94</td><td>26</td><td>68</td></tr>
+                            <tr><td class="center">3</td><td class="left"><div class="team-name"><img src="img/chelsea.png" alt=""> Chelsea</div></td><td>38</td><td>26</td><td>4</td><td>1</td><td>93</td><td>22</td><td>55</td></tr>
+                            <tr><td class="center">4</td><td class="left"><div class="team-name"><img src="img/totten.png" alt=""> Tottenham Hotspur</div></td><td>38</td><td>22</td><td>2</td><td>4</td><td>92</td><td>21</td><td>68</td></tr>
+                            <tr><td class="center">5</td><td class="left"><div class="team-name"><img src="img/arsenal.png" alt=""> Arsenal</div></td><td>38</td><td>29</td><td>6</td><td>3</td><td>99</td><td>26</td><td>73</td></tr>
+                            <tr id="last"><td class="center">6</td><td class="left"><div class="team-name"><img src="img/manun.png" alt=""> Manchester United</div></td><td>38</td><td>29</td><td>6</td><td>3</td><td>99</td><td>26</td><td>73</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="sports-article">
+            <h3>Sports Article</h3>
+            <div class="sport-groups">
+                <div class="sport-block">
+                    <div class="sport-top">
+                        <button class="category-button" id="small-button">Basketball</button>
+                    </div>
+
+                    <div class="sport-bottom">
+                        <div class="sport-profile">
+                            <img src="img/profile1.png" alt="">
+                            <h5>Jake Will.</h5>
+                        </div>
+                        <p>04 June 2023</p>
+                        <h4>5 Exercises Basketball Players Should Be Using To Develop Strength</h4>
+                        <h5>This article was written by Jake Willhoite from Healthlisted.com Strength in basketball isn’t all about a massive body mass or ripped muscles.</h5>
+                    </div>
+                </div>
+
+                <div class="sport-block">
+                    <div class="sport-top" id="sport2">
+                        <button class="category-button" id="small-button">Hockey</button>
+                    </div>
+
+                    <div class="sport-bottom">
+                        <div class="sport-profile">
+                            <img src="img/profile2.png" alt="">
+                            <h5>Jake Will.</h5>
+                        </div>
+                        <p>03 June 2023</p>
+                        <h4>Golden Knights out to fulfill owner's quest to win Stanley Cup in 6th year</h4>
+                        <h5>The Vegas Golden Knights will play the Florida Panthers in the Stanley Cup Final beginning Saturday.</h5>
+                    </div>
+                </div>
+
+                <div class="sport-block" style="display: block;">
+                    <div class="sport-top" id="sport3">
+                        <button class="category-button" id="small-button">Badminton</button>
+                    </div>
+
+                    <div class="sport-bottom">
+                        <div class="sport-profile">
+                            <img src="img/profile3.png" alt="">
+                            <h5>Jake Will.</h5>
+                        </div>
+                        <p>01 June 2023</p>
+                        <h4>‘Outdoor’ Badminton Gets Support From Local Federation</h4>
+                        <h5>The Badminton World Federation is developing Air Badminton and the country’s governing body, Philippine Badminton Association.</h5>
+                    </div>
+                </div>
+
+                <!--<div class="sport-block">
+                    <div class="sport-top">
+                        <button class="category-button" id="small-button">Basketball</button>
+                    </div>
+
+                    <div class="sport-bottom">
+                        <div class="sport-profile">
+                            <img src="img/profile1.png" alt="">
+                            <h5>Jake Will.</h5>
+                        </div>
+                        <p>04 June 2023</p>
+                        <h4>5 Exercises Basketball Players Should Be Using To Develop Strength</h4>
+                        <h5>This article was written by Jake Willhoite from Healthlisted.com Strength in basketball isn’t all about a massive body mass or ripped muscles.</h5>
+                    </div>
+                </div>
+
+                <div class="sport-block">
+                    <div class="sport-top" id="sport2">
+                        <button class="category-button" id="small-button">Hockey</button>
+                    </div>
+
+                    <div class="sport-bottom">
+                        <div class="sport-profile">
+                            <img src="img/profile2.png" alt="">
+                            <h5>Jake Will.</h5>
+                        </div>
+                        <p>03 June 2023</p>
+                        <h4>Golden Knights out to fulfill owner's quest to win Stanley Cup in 6th year</h4>
+                        <h5>The Vegas Golden Knights will play the Florida Panthers in the Stanley Cup Final beginning Saturday.</h5>
+                    </div>
+                </div>
+
+                <div class="sport-block">
+                    <div class="sport-top" id="sport3">
+                        <button class="category-button" id="small-button">Badminton</button>
+                    </div>
+
+                    <div class="sport-bottom">
+                        <div class="sport-profile">
+                            <img src="img/profile3.png" alt="">
+                            <h5>Jake Will.</h5>
+                        </div>
+                        <p>01 June 2023</p>
+                        <h4>‘Outdoor’ Badminton Gets Support From Local Federation</h4>
+                        <h5>The Badminton World Federation is developing Air Badminton and the country’s governing body, Philippine Badminton Association.</h5>
+                    </div>
+                </div>-->
+            </div>
+            <div class="sport-buttons">
+                <button class="arrow-button" id="left-arrow-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 50" fill="none">
+                        <g clip-path="url(#clip0_34_4192)">
+                          <path d="M47.0781 26C47.6304 26 48.0781 25.5523 48.0781 25C48.0781 24.4477 47.6304 24 47.0781 24L47.0781 26ZM22.2917 24.2929C21.9012 24.6834 21.9012 25.3166 22.2917 25.7071L28.6557 32.0711C29.0462 32.4616 29.6794 32.4616 30.0699 32.0711C30.4604 31.6805 30.4604 31.0474 30.0699 30.6569L24.4131 25L30.0699 19.3431C30.4604 18.9526 30.4604 18.3195 30.0699 17.9289C29.6794 17.5384 29.0462 17.5384 28.6557 17.9289L22.2917 24.2929ZM47.0781 24L22.9988 24L22.9988 26L47.0781 26L47.0781 24Z" fill="#EBEEF3"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_34_4192">
+                            <rect x="70" width="50" height="70" rx="3" transform="rotate(90 70 0)" fill="white"/>
+                          </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+
+                <button class="arrow-button" id="right-arrow-button">
+                    <svg id="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 50" fill="none">
+                        <g clip-path="url(#clip0_34_4192)">
+                          <path d="M47.0781 26C47.6304 26 48.0781 25.5523 48.0781 25C48.0781 24.4477 47.6304 24 47.0781 24L47.0781 26ZM22.2917 24.2929C21.9012 24.6834 21.9012 25.3166 22.2917 25.7071L28.6557 32.0711C29.0462 32.4616 29.6794 32.4616 30.0699 32.0711C30.4604 31.6805 30.4604 31.0474 30.0699 30.6569L24.4131 25L30.0699 19.3431C30.4604 18.9526 30.4604 18.3195 30.0699 17.9289C29.6794 17.5384 29.0462 17.5384 28.6557 17.9289L22.2917 24.2929ZM47.0781 24L22.9988 24L22.9988 26L47.0781 26L47.0781 24Z" fill="#EBEEF3"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_34_4192">
+                            <rect x="70" width="50" height="70" rx="3" transform="rotate(90 70 0)" fill="white"/>
+                          </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="subscription">
+            <div class="subscription-left">
+                <h2>NEWSETTLER SUBSCRIPTION</h2>
+                <div class="sub-input">
+                    <input type="text" placeholder="Email">
+                    <button>
+                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.734299 18.1565C0.343775 18.5471 0.343775 19.1802 0.734299 19.5708C1.12482 19.9613 1.75799 19.9613 2.14851 19.5708L0.734299 18.1565ZM19.468 1.83703C19.468 1.28474 19.0203 0.837026 18.468 0.837026L9.46803 0.837027C8.91574 0.837026 8.46803 1.28474 8.46803 1.83703C8.46803 2.38931 8.91574 2.83703 9.46803 2.83703L17.468 2.83703L17.468 10.837C17.468 11.3893 17.9157 11.837 18.468 11.837C19.0203 11.837 19.468 11.3893 19.468 10.837L19.468 1.83703ZM2.14851 19.5708L19.1751 2.54413L17.7609 1.12992L0.734299 18.1565L2.14851 19.5708Z" fill="#EBEEF3"/>
+                        </svg>                           
+                    </button>
+                </div>
+            </div>
+        </div>
+
+            <div class="sub-buttons" id="sub-carousel">
+                <div class="left-buttons">
+                    <button>
+                         <a href="">
+                             <svg viewBox="0 0 19 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M17.7904 20.9924L18.6923 14.5313H12.5293V10.3777C12.5293 8.53169 13.4312 6.8395 16.1369 6.8395H18.8426V1.30141C18.8426 1.30141 16.2872 0.839905 13.8821 0.839905C8.92161 0.839905 5.6146 3.91662 5.6146 9.60854V14.5313H0.203125V20.9924H5.76492V36.6836C6.81715 36.8374 8.0197 36.9913 9.22225 36.9913C10.4248 36.9913 11.477 36.8374 12.6796 36.6836V20.9924H17.7904Z" fill="white"/>
+                             </svg>
+                         </a>
+                    </button>
+                     
+
+                    <button>
+                         <a href="">
+                            <svg viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.1456 4.99573C20.1793 4.99573 19.5352 5.65499 19.5352 6.64388C19.5352 7.63276 20.3404 8.29202 21.1456 8.29202C22.1119 8.29202 22.7561 7.63276 22.7561 6.64388C22.7561 5.8198 22.1119 4.99573 21.1456 4.99573Z" fill="white"/>
+                                <path d="M14.0608 7.14246C10.3568 7.14246 7.29688 10.2739 7.29688 14.0647C7.29688 17.8554 10.3568 20.9869 14.0608 20.9869C17.7649 20.9869 20.8248 17.8554 20.8248 14.0647C20.8248 10.2739 17.7649 7.14246 14.0608 7.14246ZM14.0608 18.5147C11.6451 18.5147 9.71258 16.5369 9.71258 14.0647C9.71258 11.5925 11.6451 9.61468 14.0608 9.61468C16.4765 9.61468 18.4091 11.5925 18.4091 14.0647C18.4091 16.5369 16.4765 18.5147 14.0608 18.5147Z" fill="white"/>
+                                <path d="M19.3755 28.2381H8.42433C3.91502 28.2381 0.210938 24.4474 0.210938 19.8326V8.62516C0.210938 4.01034 3.91502 0.219604 8.42433 0.219604H19.3755C23.8848 0.219604 27.5889 4.01034 27.5889 8.62516V19.6677C27.7499 24.4474 24.0459 28.2381 19.3755 28.2381ZM8.42433 2.69183C5.20339 2.69183 2.78769 5.32886 2.78769 8.46034V19.6677C2.78769 22.964 5.36444 25.4363 8.42433 25.4363H19.3755C22.5964 25.4363 25.0121 22.7992 25.0121 19.6677V8.46034C25.0121 5.16405 22.4354 2.69183 19.3755 2.69183H8.42433Z" fill="white"/>
+                            </svg>                                
+                         </a>
+                    </button>
+
+                    <button>
+                         <a href="">
+                            <svg viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.8625 2.82242C25.0572 3.15205 24.091 3.48168 23.2857 3.6465C23.7689 3.6465 24.252 2.82242 24.5741 2.49279C24.8962 1.99835 25.2183 1.5039 25.3793 0.844643V0.67983H25.2183C24.252 1.17427 23.2857 1.66872 22.1584 1.83353C21.9973 1.83353 21.9974 1.83353 21.9974 1.83353C21.8363 1.66872 21.8363 1.66872 21.6753 1.5039C21.1921 1.17427 20.709 0.844644 20.2258 0.515014C19.5816 0.185385 18.7764 0.0205705 17.9712 0.185385C17.1659 0.185385 16.5218 0.515014 15.8776 0.844643C15.2334 1.17427 14.5892 1.66872 14.1061 2.32798C13.6229 2.98724 13.3008 3.6465 13.1398 4.47057C12.9787 5.29464 12.9787 5.9539 13.1398 6.77797C13.1398 6.94279 13.1398 6.94279 12.9787 6.94279C8.79151 6.28353 5.24848 4.8002 2.34964 1.5039C2.18859 1.33909 2.1886 1.33909 2.02755 1.5039C0.739174 3.48168 1.38336 6.44834 2.99383 7.93168C3.15487 8.09649 3.47697 8.26131 3.63802 8.59094C3.47697 8.59094 2.51068 8.42612 1.5444 7.93168C1.38336 7.93168 1.38336 7.93168 1.38336 8.09649C1.38336 8.26131 1.38336 8.42612 1.38336 8.75575C1.54441 10.7335 2.99382 12.5465 4.76534 13.2057C4.92639 13.3706 5.24848 13.3706 5.40953 13.3706C4.92639 13.5354 4.6043 13.5354 3.47697 13.3706C3.31593 13.3706 3.31592 13.3706 3.31592 13.5354C4.12115 16.0076 6.05372 16.6669 7.50314 17.1613C7.66419 17.1613 7.82523 17.1613 8.14732 17.1613C7.66418 17.8206 6.05372 18.4798 5.24848 18.6446C3.79906 19.1391 2.34963 19.3039 0.900214 19.1391C0.739167 19.1391 0.578125 19.1391 0.578125 19.1391V19.3039C0.900219 19.4687 1.22231 19.6335 1.5444 19.7983C2.51068 20.2928 3.47697 20.7872 4.44325 20.952C9.75779 22.4354 15.5555 21.2817 19.5816 17.3261C22.6415 14.1946 23.7689 9.90945 23.7689 5.45946C23.7689 5.29464 23.9299 5.12983 24.091 5.12983C24.8962 4.47057 25.5404 3.81131 26.1846 2.98724C25.8625 3.15205 25.8625 2.98724 25.8625 2.82242Z" fill="white"/>
+                            </svg>        
+                         </a>
+                    </button>
+                 </div>
+
+                <div class="carousel-panel">
+                    <button class="arrow-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 50" fill="none">
+                            <g clip-path="url(#clip0_34_4192)">
+                              <path d="M47.0781 26C47.6304 26 48.0781 25.5523 48.0781 25C48.0781 24.4477 47.6304 24 47.0781 24L47.0781 26ZM22.2917 24.2929C21.9012 24.6834 21.9012 25.3166 22.2917 25.7071L28.6557 32.0711C29.0462 32.4616 29.6794 32.4616 30.0699 32.0711C30.4604 31.6805 30.4604 31.0474 30.0699 30.6569L24.4131 25L30.0699 19.3431C30.4604 18.9526 30.4604 18.3195 30.0699 17.9289C29.6794 17.5384 29.0462 17.5384 28.6557 17.9289L22.2917 24.2929ZM47.0781 24L22.9988 24L22.9988 26L47.0781 26L47.0781 24Z" fill="#EBEEF3"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_34_4192">
+                                <rect x="70" width="50" height="70" rx="3" transform="rotate(90 70 0)" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                    <p id="first-page">1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <button class="arrow-button" id="right-arrow-button">
+                        <svg id="right-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 50" fill="none">
+                            <g clip-path="url(#clip0_34_4192)">
+                              <path d="M47.0781 26C47.6304 26 48.0781 25.5523 48.0781 25C48.0781 24.4477 47.6304 24 47.0781 24L47.0781 26ZM22.2917 24.2929C21.9012 24.6834 21.9012 25.3166 22.2917 25.7071L28.6557 32.0711C29.0462 32.4616 29.6794 32.4616 30.0699 32.0711C30.4604 31.6805 30.4604 31.0474 30.0699 30.6569L24.4131 25L30.0699 19.3431C30.4604 18.9526 30.4604 18.3195 30.0699 17.9289C29.6794 17.5384 29.0462 17.5384 28.6557 17.9289L22.2917 24.2929ZM47.0781 24L22.9988 24L22.9988 26L47.0781 26L47.0781 24Z" fill="#EBEEF3"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_34_4192">
+                                <rect x="70" width="50" height="70" rx="3" transform="rotate(90 70 0)" fill="white"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    </main>
+</body>
+<script src="js/main.js"></script>
+</html>
